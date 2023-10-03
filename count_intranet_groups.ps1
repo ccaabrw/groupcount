@@ -7,7 +7,7 @@ param (
 
 $u = get-aduser $user -properties department,memberof
 
-$u | fl name,givenname,surname,department
+$u | fl name,givenname,surname,title,department
 
 $u.memberof |
 sls intranet-groups |% {
