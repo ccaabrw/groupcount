@@ -5,7 +5,7 @@ param (
   $user = "ccaaxyz"
 )
 
-$u = get-aduser $user -properties department,memberof
+$u = get-aduser $user -properties title,department,memberof
 
 $u | fl name,givenname,surname,title,department
 
